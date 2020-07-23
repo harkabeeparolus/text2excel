@@ -20,6 +20,7 @@ def write_excel(csv_filename=None, convert_numbers=False):
     infile = Path(csv_filename)
     wb = openpyxl.Workbook()
     worksheet = wb.active
+
     with open(infile, newline="") as csvfile:
         dialect = get_dialect(csv_filename, csvfile)
         reader = csv.reader(csvfile, dialect)
@@ -28,9 +29,10 @@ def write_excel(csv_filename=None, convert_numbers=False):
                 worksheet.append([convert_to_number(cell) for cell in row])
             else:
                 worksheet.append([cell for cell in row])
-    outfile = infile.with_suffix(".xlsx")
 
+    outfile = infile.with_suffix(".xlsx")
     wb.save(str(outfile))
+
     return outfile
 
 
