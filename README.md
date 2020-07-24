@@ -51,3 +51,8 @@ pipx install shiv
 Alternatively, if you really don't want to use pipx for some reason, you can
 simply run `python3 -m pip install --user shiv`, and if necessary, manually
 reconfigure your shell `$PATH` to find any pip installed binaries.
+
+## Credits
+
+This project is originally based on a Gist by Konrad Förstner:
+* https://gist.github.com/konrad/4154786
