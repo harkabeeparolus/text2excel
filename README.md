@@ -6,6 +6,9 @@ As input it takes tab-separated `*.txt` files (TSV), or any CSV files
 (Comma-Separated Values) that can be auto-detected by the Python standard
 library [csv] module.
 
+* Do you want to help out with this project?
+  * Please check the [CONTRIBUTING](CONTRIBUTING.md) guide.
+
 [openpyxl]: https://openpyxl.readthedocs.io/
 [csv]: https://docs.python.org/3/library/csv.html
 [shiv]: https://github.com/linkedin/shiv
@@ -51,6 +54,10 @@ pipx install shiv
 Alternatively, if you really don't want to use pipx for some reason, you can
 simply run `python3 -m pip install --user shiv`, and if necessary, manually
 reconfigure your shell `$PATH` to find any pip installed binaries.
+
+## News
+
+Please see the [changelog](CHANGELOG.md) for more details.
 
 ## Credits
 
