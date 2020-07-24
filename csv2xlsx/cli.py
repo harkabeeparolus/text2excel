@@ -31,17 +31,22 @@ def main(arguments=None):
         help="convert integers and floats to Excel numbers",
     )
     parser.add_argument("-V", "--version", action="version", version=__version__)
-    parser.add_argument("input_file")
+    parser.add_argument(
+        "files", metavar="INPUT_FILE", nargs="+", help="text file(s) to convert"
+    )
     args = parser.parse_args(arguments)
 
-    xlsxfile = convert.write_excel(args.input_file, convert_numbers=args.numbers)
+    errors = 0
+    for input_file in args.files:
+        xlsxfile = convert.write_excel(input_file, convert_numbers=args.numbers)
 
-    if xlsxfile:
-        print(f"Saved to file: {xlsxfile}")
-    else:
-        print(f"error: Could not convert {args.input_file}")
+        if xlsxfile:
+            print(f"Saved to file: {xlsxfile}")
+        else:
+            print(f"error: Could not convert {input_file}")
+            errors += 1
 
-    return 0
+    return 1 if errors else 0
 
 
 if __name__ == "__main__":
