@@ -1,9 +1,7 @@
 #! /usr/bin/env python3
-
 """
 Converts a CSV (tab delimited) file to an Excel xlsx file.
 """
-
 import csv
 import sys
 from pathlib import Path

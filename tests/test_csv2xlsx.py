@@ -1,9 +1,8 @@
 "pytest tests for csv2xlsx"
-
 import csv
 
-import pytest
 import openpyxl
+import pytest
 
 from csv2xlsx import __version__
 from csv2xlsx import cli
