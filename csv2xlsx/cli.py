@@ -9,7 +9,7 @@ Otherwise, CSV is assumed and auto-detected.
 """
 
 # By Fredrik Mellström <https://github.com/harkabeeparolus>
-# Based on https://gist.github.com/konrad/4154786
+# Based on https://gist.github.com/konrad/4154786 by Konrad Förstner
 
 import argparse
 import sys
@@ -19,6 +19,7 @@ from csv2xlsx import convert
 
 
 def main(arguments=None):
+    "Parse arguments and run csv2xlsx from the command line."
     if arguments is None:
         arguments = sys.argv[1:]
 

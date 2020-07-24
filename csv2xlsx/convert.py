@@ -11,15 +11,15 @@ from pathlib import Path
 import openpyxl
 
 # By Fredrik Mellström <https://github.com/harkabeeparolus>
-# Based on https://gist.github.com/konrad/4154786
+# Based on https://gist.github.com/konrad/4154786 by Konrad Förstner
 
 
 def write_excel(csv_filename=None, convert_numbers=False):
     """Read data from the csv.reader, and write to xlsxfile."""
 
     infile = Path(csv_filename)
-    wb = openpyxl.Workbook()
-    worksheet = wb.active
+    workbook = openpyxl.Workbook()
+    worksheet = workbook.active
 
     with open(infile, newline="") as csvfile:
         dialect = get_dialect(csv_filename, csvfile)
@@ -28,10 +28,10 @@ def write_excel(csv_filename=None, convert_numbers=False):
             if convert_numbers:
                 worksheet.append([convert_to_number(cell) for cell in row])
             else:
-                worksheet.append([cell for cell in row])
+                worksheet.append(list(row))
 
     outfile = infile.with_suffix(".xlsx")
-    wb.save(str(outfile))
+    workbook.save(str(outfile))
 
     return outfile
 
