@@ -18,8 +18,8 @@ library [csv] module.
 
 ```bash
 $ printf "one\ttwo\tthree\n1\t2\t3\n" | tee my_data_file.txt
-one	two	three
-1	2	3
+one two three
+1   2   3
 
 $ csv2xlsx --numbers my_data_file.txt
 Saved to file: my_data_file.xlsx
@@ -62,4 +62,5 @@ Please see the [changelog](CHANGELOG.md) for more details.
 ## Credits
 
 This project is originally based on a Gist by Konrad Förstner:
-* https://gist.github.com/konrad/4154786
+
+* [https://gist.github.com/konrad/4154786]
