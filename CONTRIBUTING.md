@@ -40,7 +40,7 @@ poetry update
 poetry export -f requirements.txt >requirements.txt
 ```
 
-Make sure to run `pytest`, and then check in:
+Make sure to do `poetry run pytest`, and then check in:
 
 * pyproject.toml
 * poetry.lock
@@ -54,13 +54,24 @@ You can use any coding style you want, as long as it's [Black]. 😉
 
 ## Code Quality
 
-Use pylint, flake8 and black before checking in your code.
+Test your code. We use [pytest]. Write new tests as necessary, and please
+test your code before checking in.
+
+```bash
+poetry run pytest
+```
+
+Use [pylint], [Flake8] and [black] before checking in your code:
 
 ```bash
 black csv2xlsx
 poetry run pylint csv2xlsx
 flake8 csv2xlsx
 ```
+
+[pytest]: https://pytest.org/
+[pylint]: https://www.pylint.org
+[Flake8]: https://flake8.pycqa.org/
 
 * I should probably add this as a Git pre-commit hook, but I haven't
   yet done so.

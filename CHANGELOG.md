@@ -7,7 +7,17 @@ The format is based on
 and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.1.0 - 2020-07-24
+## 0.2.0 - 2020-07-24
+
+### Added
+
+- Tests. Running `poetry run pytest` actually does something useful now.
+
+### Changed
+
+- Added some more help to the command line interface.
+
+## 0.1.0 - 2020-07-23
 
 Initial Github release — https://github.com/harkabeeparolus/csv2xlsx
 
