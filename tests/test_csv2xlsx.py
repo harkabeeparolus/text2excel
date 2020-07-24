@@ -43,9 +43,9 @@ def test_convert_float():
 
 
 def test_openpyxl_alive():
-    "Make sure we can create Workbook objects"
+    "Make sure we can create openpyxl Workbook objects"
     workbook = openpyxl.Workbook()
-    assert hasattr(workbook, "worksheets") == True
+    assert hasattr(workbook, "worksheets")
 
 
 # EOF

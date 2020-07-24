@@ -23,8 +23,13 @@ def main(arguments=None):
     if arguments is None:
         arguments = sys.argv[1:]
 
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-n", "--numbers", action="store_true")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "-n",
+        "--numbers",
+        action="store_true",
+        help="convert integers and floats to Excel numbers",
+    )
     parser.add_argument("-V", "--version", action="version", version=__version__)
     parser.add_argument("input_file")
     args = parser.parse_args(arguments)
