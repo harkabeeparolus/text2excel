@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "csv2xlsx"
-version = "0.1.0"
+version = "0.3.0"
 description = "Converts to Excel XLSX from a TSV or CSV text file."
-authors = ["Fredrik Mellström <fredrikm@gmail.com>"]
+authors = ["Fredrik Mellström <11281108+harkabeeparolus@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.6.1"

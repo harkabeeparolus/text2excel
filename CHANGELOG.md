@@ -9,10 +9,15 @@ and this project adheres to
 
 ## unreleased
 
+- Nothing yet
+
+## 0.3.0 - 2020-07-27
+
 ### Added
 
 - Handle multiple input files from the command line, instead of just one.
-- pytest: Test that an output file is created.
+- pytest: Test that an output file is actually created.
+  (No tests yet for correct file contents, however.)
 
 ### Changed
 

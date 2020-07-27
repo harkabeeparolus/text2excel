@@ -12,7 +12,7 @@ from csv2xlsx import convert
 
 def test_version():
     "Check package structure and version number"
-    assert __version__ == "0.1.0"
+    assert __version__ == "0.3.0"
 
 
 def test_argparse(capsys):
