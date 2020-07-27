@@ -11,6 +11,13 @@ and this project adheres to
 
 - Nothing yet
 
+## 0.3.1 - 2020-07-27
+
+### Changed
+
+- Single-source package version number from _pyproject.toml_, instead of
+  manually duplicating it in several different places.
+
 ## 0.3.0 - 2020-07-27
 
 ### Added

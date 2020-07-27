@@ -26,7 +26,7 @@ please check the well-written guide here:
 Use [Poetry] to install and manage your virtual environments:
 
 ```bash
-mkdir .venv
+python3 -m venv --prompt csv2xlsx .venv
 poetry install
 ```
 
