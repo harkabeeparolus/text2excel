@@ -26,7 +26,7 @@ and this project adheres to
 
 ## 0.1.0 - 2020-07-23
 
-Initial Github release — https://github.com/harkabeeparolus/csv2xlsx
+Initial Github release — <https://github.com/harkabeeparolus/csv2xlsx>
 
 ### Added
 
