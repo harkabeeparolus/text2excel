@@ -6,9 +6,6 @@ As input it takes tab-separated `*.txt` files (TSV), or any CSV files
 (Comma-Separated Values) that can be auto-detected by the Python standard
 library [csv] module.
 
-* Do you want to help out with this project?
-  * Please check the [CONTRIBUTING](CONTRIBUTING.md) guide.
-
 [openpyxl]: https://openpyxl.readthedocs.io/
 [csv]: https://docs.python.org/3/library/csv.html
 [shiv]: https://github.com/linkedin/shiv
@@ -59,8 +56,13 @@ reconfigure your shell `$PATH` to find any pip installed binaries.
 
 Please see the [changelog](CHANGELOG.md) for more details.
 
+## Contributing
+
+Do you want to help out with this project?
+
+* Please check the [CONTRIBUTING](CONTRIBUTING.md) guide.
+
 ## Credits
 
-This project is originally based on a Gist by Konrad Förstner:
-
-* [https://gist.github.com/konrad/4154786]
+This project was originally based on
+[a Gist by Konrad Förstner](https://gist.github.com/konrad/4154786).

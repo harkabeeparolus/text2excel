@@ -7,6 +7,12 @@ The format is based on
 and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## unreleased
+
+### Added
+
+- Handle multiple input files from the command line, instead of just one.
+
 ## 0.2.0 - 2020-07-24
 
 ### Added
