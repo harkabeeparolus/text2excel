@@ -7,7 +7,6 @@ authors = ["Fredrik Mellström <fredrikm@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.6.1"
 openpyxl = "^3.0.4"
-pre-commit = "^2.6.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

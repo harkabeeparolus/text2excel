@@ -14,6 +14,10 @@ and this project adheres to
 - Handle multiple input files from the command line, instead of just one.
 - pytest: Test that an output file is created.
 
+### Changed
+
+- Recommend __pre-commit__ to automate code formatting and linting.
+
 ## 0.2.0 - 2020-07-24
 
 ### Added

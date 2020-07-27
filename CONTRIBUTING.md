@@ -73,12 +73,20 @@ flake8 csv2xlsx
 [pylint]: https://www.pylint.org
 [Flake8]: https://flake8.pycqa.org/
 
-* I should probably add this as a Git pre-commit hook, but I haven't
-  yet done so.
-
-* After that, I should also setup automated testing with
+* I should setup automated testing with
   [tox](https://tox.readthedocs.io/)
   or [nox](https://github.com/theacodes/nox)
+
+### pre-commit
+
+To partially automate linting, we use [pre-commit].
+
+```bash
+pipx install pre-commit
+pre-commit install
+```
+
+[pre-commit]: https://pre-commit.com
 
 ## Getting Python Software with pipx
 
@@ -95,15 +103,15 @@ python3 -m pip install --user --upgrade-strategy eager --upgrade pipx
 python3 -m pipx ensurepath
 ```
 
-Then you can install stuff such as **pipenv**, **black** or **shiv** using
+Then you can install stuff such as **pre-commit**, **black** or **shiv** using
 pipx!
 
 ```bash
-pipx install pipenv
 pipx install black
 pipx install pylint
 pipx install flake8
 pipx install shiv
+pipx install pre-commit
 ```
 
 To automagically upgrade all your pipx packages, run:
