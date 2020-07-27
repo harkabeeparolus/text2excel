@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "csv2xlsx"
-version = "0.3.0"
+version = "0.3.1"
 description = "Converts to Excel XLSX from a TSV or CSV text file."
 license = "MIT"
 authors = ["Fredrik Mellström <11281108+harkabeeparolus@users.noreply.github.com>"]
