@@ -12,6 +12,7 @@ and this project adheres to
 ### Added
 
 - Handle multiple input files from the command line, instead of just one.
+- pytest: Test that an output file is created.
 
 ## 0.2.0 - 2020-07-24
 

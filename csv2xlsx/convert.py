@@ -12,10 +12,15 @@ import openpyxl
 # Based on https://gist.github.com/konrad/4154786 by Konrad Förstner
 
 
-def write_excel(csv_filename=None, convert_numbers=False):
+def write_excel(csv_filename=None, outfilename=None, convert_numbers=False):
     """Read data from the csv.reader, and write to xlsxfile."""
 
     infile = Path(csv_filename)
+    if outfilename:
+        outfile = Path(outfilename)
+    else:
+        outfile = infile.with_suffix(".xlsx")
+
     workbook = openpyxl.Workbook()
     worksheet = workbook.active
 
@@ -28,7 +33,6 @@ def write_excel(csv_filename=None, convert_numbers=False):
             else:
                 worksheet.append(list(row))
 
-    outfile = infile.with_suffix(".xlsx")
     workbook.save(str(outfile))
 
     return outfile

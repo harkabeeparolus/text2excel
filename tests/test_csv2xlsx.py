@@ -1,5 +1,6 @@
 "pytest tests for csv2xlsx"
 import csv
+import tempfile
 
 import openpyxl
 import pytest
@@ -45,6 +46,18 @@ def test_openpyxl_alive():
     "Make sure we can create openpyxl Workbook objects"
     workbook = openpyxl.Workbook()
     assert hasattr(workbook, "worksheets")
+
+
+def test_create_file():
+    "Try to convert a file, check that outfile is >0 bytes"
+    ntf = tempfile.NamedTemporaryFile
+    with ntf(suffix=".txt", mode="w+") as infile, ntf(suffix=".xlsx") as outfile:
+        print("one\ttwo\tthree\n1\t2\t3", file=infile)
+        infile.flush()
+        result = convert.write_excel(csv_filename=infile.name, outfilename=outfile.name)
+        assert hasattr(result, "exists")
+        assert result.exists()
+        assert result.stat().st_size > 0
 
 
 # EOF
