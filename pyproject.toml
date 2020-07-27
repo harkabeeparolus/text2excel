@@ -2,11 +2,15 @@
 name = "csv2xlsx"
 version = "0.3.0"
 description = "Converts to Excel XLSX from a TSV or CSV text file."
+license = "MIT"
 authors = ["Fredrik Mellström <11281108+harkabeeparolus@users.noreply.github.com>"]
+readme = "README.md"
+homepage = "https://github.com/harkabeeparolus/csv2xlsx"
 
 [tool.poetry.dependencies]
 python = "^3.6.1"
 openpyxl = "^3.0.4"
+importlib-metadata = { version = "^1", python = "<3.8" }
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

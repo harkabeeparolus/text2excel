@@ -5,23 +5,18 @@ import tempfile
 import openpyxl
 import pytest
 
-from csv2xlsx import __version__
 from csv2xlsx import cli
 from csv2xlsx import convert
-
-
-def test_version():
-    "Check package structure and version number"
-    assert __version__ == "0.3.0"
+from csv2xlsx import version
 
 
 def test_argparse(capsys):
-    "Make sure argparse works"
+    "Make sure argparse works, and verify version"
     with pytest.raises(SystemExit):
         cli.main(["--version"])
 
     captured = capsys.readouterr()
-    assert captured.out == f"{__version__}\n"
+    assert captured.out == f"{version}\n"
 
 
 def test_get_dialect_filename():

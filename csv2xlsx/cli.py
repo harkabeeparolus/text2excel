@@ -11,8 +11,8 @@ Otherwise, CSV is assumed and auto-detected.
 import argparse
 import sys
 
-from csv2xlsx import __version__
 from csv2xlsx import convert
+from csv2xlsx import version
 
 
 def main(arguments=None):
@@ -27,7 +27,7 @@ def main(arguments=None):
         action="store_true",
         help="convert integers and floats to Excel numbers",
     )
-    parser.add_argument("-V", "--version", action="version", version=__version__)
+    parser.add_argument("-V", "--version", action="version", version=version)
     parser.add_argument(
         "files", metavar="INPUT_FILE", nargs="+", help="text file(s) to convert"
     )
