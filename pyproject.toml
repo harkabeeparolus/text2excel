@@ -5,7 +5,7 @@ description = "Converts to Excel XLSX from a TSV or CSV text file."
 license = "MIT"
 authors = ["Fredrik Mellström <11281108+harkabeeparolus@users.noreply.github.com>"]
 readme = "README.md"
-homepage = "https://github.com/harkabeeparolus/csv2xlsx"
+homepage = "https://github.com/harkabeeparolus/text2excel"
 keywords = ["csv", "tsv", "excel", "xlsx"]
 classifiers = [
     "Intended Audience :: Information Technology",

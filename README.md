@@ -7,6 +7,9 @@ As input it takes tab-separated `*.txt` files (TSV), or any CSV files
 (Comma-Separated Values) that can be auto-detected by the Python standard
 library [csv] module.
 
+* There is a [GitHub page for text2excel][text2excel]
+
+[text2excel]: https://github.com/harkabeeparolus/text2excel
 [openpyxl]: https://openpyxl.readthedocs.io/
 [csv]: https://docs.python.org/3/library/csv.html
 
@@ -26,7 +29,7 @@ Saved to file: my_data_file.xlsx
 I recommend installing *text2excel* with [pipx]:
 
 ```bash
-pipx install git+https://github.com/harkabeeparolus/csv2xlsx.git
+pipx install git+https://github.com/harkabeeparolus/text2excel.git
 ```
 
 If you don't already have it, a guide for how to install _pipx_ is provided
@@ -44,13 +47,13 @@ If you want to bundle up *text2excel* into a single, standalone executable Pytho
 [zipapp], I highly recommend [shiv]. For example:
 
 ```bash
-shiv -o text2excel -p "/usr/bin/env python3" -c text2excel git+https://github.com/harkabeeparolus/csv2xlsx.git
+shiv -o text2excel -p "/usr/bin/env python3" -c text2excel git+https://github.com/harkabeeparolus/text2excel.git
 ```
 
 If _shiv_ doesn't work for you for some reason, you can also use [PEX]:
 
 ```bash
-pex -o text2excel -c text2excel git+https://github.com/harkabeeparolus/csv2xlsx.git
+pex -o text2excel -c text2excel git+https://github.com/harkabeeparolus/text2excel.git
 ```
 
 [pipx]: https://github.com/pipxproject/pipx/
