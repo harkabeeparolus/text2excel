@@ -23,14 +23,20 @@ please check the well-written guide here:
 
 ## Package Dependencies
 
-Use [Poetry] to install and manage your virtual environments:
+Use [Poetry] to install and manage your virtual environments and package
+dependencies:
 
 ```bash
+pipx install poetry
+git clone https://github.com/harkabeeparolus/text2excel.git
+cd text2excel
 python3 -m venv --prompt text2excel .venv
 poetry install
 ```
 
 [Poetry]: https://python-poetry.org
+
+### Upgrading Dependencies
 
 To upgrade the packages to the latest versions, and generate a new
 *requirements.txt*, simply:
@@ -107,6 +113,7 @@ Then you can install stuff such as **pre-commit**, **black** or **shiv** using
 pipx!
 
 ```bash
+pipx install poetry
 pipx install black
 pipx install pylint
 pipx install flake8

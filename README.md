@@ -29,7 +29,7 @@ Saved to file: my_data_file.xlsx
 I recommend installing *text2excel* with [pipx]:
 
 ```bash
-pipx install git+https://github.com/harkabeeparolus/text2excel.git
+pipx install text2excel
 ```
 
 If you don't already have it, a guide for how to install _pipx_ is provided
@@ -47,13 +47,13 @@ If you want to bundle up *text2excel* into a single, standalone executable Pytho
 [zipapp], I highly recommend [shiv]. For example:
 
 ```bash
-shiv -o text2excel -p "/usr/bin/env python3" -c text2excel git+https://github.com/harkabeeparolus/text2excel.git
+shiv -o text2excel -p "/usr/bin/env python3" -c text2excel text2excel
 ```
 
 If _shiv_ doesn't work for you for some reason, you can also use [PEX]:
 
 ```bash
-pex -o text2excel -c text2excel git+https://github.com/harkabeeparolus/text2excel.git
+pex -o text2excel -c text2excel text2excel
 ```
 
 [pipx]: https://github.com/pipxproject/pipx/
