@@ -6,6 +6,14 @@ license = "MIT"
 authors = ["Fredrik Mellström <11281108+harkabeeparolus@users.noreply.github.com>"]
 readme = "README.md"
 homepage = "https://github.com/harkabeeparolus/csv2xlsx"
+keywords = ["csv", "tsv", "excel", "xlsx"]
+classifiers = [
+    "Intended Audience :: Information Technology",
+    "Environment :: Console",
+    "Operating System :: OS Independent",
+    "Topic :: Text Processing",
+    "Topic :: Utilities"
+]
 
 [tool.poetry.dependencies]
 python = "^3.6.1"
