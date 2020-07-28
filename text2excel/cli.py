@@ -1,10 +1,10 @@
 #! /usr/bin/env python3
 """
-Converts a TSV (tab delimited) or CSV (comma delimited) file to an Excel xlsx
-file.
+Converts a TSV (tab delimited) or CSV (comma delimited) text file to an Excel
+xlsx file.
 
-If the file name matches *.txt, TSV is assumed.
-Otherwise, CSV is assumed and auto-detected.
+If the file name matches *.txt, TSV is assumed. Otherwise, CSV is assumed and
+auto-detected.
 """
 # By Fredrik Mellström <https://github.com/harkabeeparolus>
 # Based on https://gist.github.com/konrad/4154786 by Konrad Förstner
@@ -20,7 +20,10 @@ def main(arguments=None):
     if arguments is None:
         arguments = sys.argv[1:]
 
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(
+        description=__doc__,
+        epilog="More information: https://github.com/harkabeeparolus/text2excel",
+    )
     parser.add_argument(
         "-n",
         "--numbers",
