@@ -11,12 +11,12 @@ Otherwise, CSV is assumed and auto-detected.
 import argparse
 import sys
 
-from csv2xlsx import convert
-from csv2xlsx import version
+from text2excel import convert
+from text2excel import version
 
 
 def main(arguments=None):
-    "Parse arguments and run csv2xlsx from the command line."
+    "Parse arguments and run text2excel from the command line."
     if arguments is None:
         arguments = sys.argv[1:]
 

@@ -1,4 +1,4 @@
-# Changelog for csv2xlsx
+# Changelog for text2excel
 
 All notable changes to this project will be documented in this file.
 
@@ -10,6 +10,13 @@ and this project adheres to
 ## unreleased
 
 - Nothing yet
+
+## 0.4.0 - 2020-07-28
+
+### Changed
+
+- Changed project name from *csv2xlsx* to *text2excel*, since the former was
+  not available on PyPI.
 
 ## 0.3.1 - 2020-07-27
 

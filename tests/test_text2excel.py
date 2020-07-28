@@ -1,13 +1,13 @@
-"pytest tests for csv2xlsx"
+"pytest tests for text2excel"
 import csv
 import tempfile
 
 import openpyxl
 import pytest
 
-from csv2xlsx import cli
-from csv2xlsx import convert
-from csv2xlsx import version
+from text2excel import cli
+from text2excel import convert
+from text2excel import version
 
 
 def test_argparse(capsys):

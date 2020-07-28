@@ -1,4 +1,4 @@
-# Contributing to csv2xlsx
+# Contributing to text2excel
 
 Please feel free to send a pull request.  🙂
 
@@ -26,7 +26,7 @@ please check the well-written guide here:
 Use [Poetry] to install and manage your virtual environments:
 
 ```bash
-python3 -m venv --prompt csv2xlsx .venv
+python3 -m venv --prompt text2excel .venv
 poetry install
 ```
 
@@ -64,9 +64,9 @@ poetry run pytest
 Use [pylint], [Flake8] and [black] before checking in your code:
 
 ```bash
-black csv2xlsx
-poetry run pylint csv2xlsx
-flake8 csv2xlsx
+black text2excel
+poetry run pylint text2excel
+flake8 text2excel
 ```
 
 [pytest]: https://pytest.org/

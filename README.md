@@ -1,4 +1,4 @@
-# csv2xlsx
+# text2excel
 
 This program converts CSV Or TSV text files to Microsoft Excel format. It
 uses [openpyxl] to create Excel files.
@@ -17,13 +17,13 @@ $ printf "one\ttwo\tthree\n1\t2\t3\n" | tee my_data_file.txt
 one two three
 1   2   3
 
-$ csv2xlsx --numbers my_data_file.txt
+$ text2excel --numbers my_data_file.txt
 Saved to file: my_data_file.xlsx
 ```
 
 ## Installation
 
-I recommend installing *csv2xlsx* with [pipx]:
+I recommend installing *text2excel* with [pipx]:
 
 ```bash
 pipx install git+https://github.com/harkabeeparolus/csv2xlsx.git
@@ -32,25 +32,25 @@ pipx install git+https://github.com/harkabeeparolus/csv2xlsx.git
 If you don't already have it, a guide for how to install _pipx_ is provided
 below on this page.
 
-To upgrade *csv2xlsx* to the latest version, simply run:
+To upgrade *text2excel* to the latest version, simply run:
 
 ```bash
-pipx upgrade csv2xlsx
+pipx upgrade text2excel
 ```
 
 Or `pipx upgrade-all` if you want to go crazy. 😉
 
-If you want to bundle up *csv2xlsx* into a single, standalone executable Python
+If you want to bundle up *text2excel* into a single, standalone executable Python
 [zipapp], I highly recommend [shiv]. For example:
 
 ```bash
-shiv -o csv2xlsx -p "/usr/bin/env python3" -c csv2xlsx git+https://github.com/harkabeeparolus/csv2xlsx.git
+shiv -o text2excel -p "/usr/bin/env python3" -c text2excel git+https://github.com/harkabeeparolus/csv2xlsx.git
 ```
 
 If _shiv_ doesn't work for you for some reason, you can also use [PEX]:
 
 ```bash
-pex -o csv2xlsx -c csv2xlsx git+https://github.com/harkabeeparolus/csv2xlsx.git
+pex -o text2excel -c text2excel git+https://github.com/harkabeeparolus/csv2xlsx.git
 ```
 
 [pipx]: https://github.com/pipxproject/pipx/

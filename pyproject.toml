@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "csv2xlsx"
+name = "text2excel"
 version = "0.3.1"
 description = "Converts to Excel XLSX from a TSV or CSV text file."
 license = "MIT"
@@ -25,7 +25,7 @@ pytest = "^5.2"
 pylint = "^2.5.3"
 
 [tool.poetry.scripts]
-csv2xlsx = 'csv2xlsx.cli:main'
+text2excel = 'text2excel.cli:main'
 
 [build-system]
 requires = ["poetry>=0.12"]
