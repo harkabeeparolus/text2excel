@@ -1,4 +1,5 @@
 "Python package file for csv2xlsx."
+# source: https://packaging.python.org/guides/single-sourcing-package-version/
 try:
     from importlib import metadata
 except ImportError:
