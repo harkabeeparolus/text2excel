@@ -19,7 +19,7 @@ def test_format_paragraphs(monkeypatch):
     )
 
     with monkeypatch.context() as monkey:
-        monkey.setenv("COLUMNS", "32")
+        monkey.setenv("COLUMNS", "35")
         formatted = fmt.format_paragraphs(lorem1)
     assert formatted == lorem2
     assert fmt.format_paragraphs("foo  bar") == "foo  bar"

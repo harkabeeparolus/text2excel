@@ -6,9 +6,10 @@ import shutil
 import textwrap
 
 
-def format_paragraphs(input_text="", min_width=16):
+def format_paragraphs(input_text="", min_width=16, margin=5):
     "Dedent and text wrap paragraphs to terminal width."
-    width = max(min_width, shutil.get_terminal_size()[0] - 2)
+    columns, _ = shutil.get_terminal_size()
+    width = max(min_width, columns - margin)
 
     # dedent and remove any initial newlines
     text = textwrap.dedent(input_text).lstrip("\n")
