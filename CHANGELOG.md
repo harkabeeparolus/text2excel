@@ -9,6 +9,14 @@ and this project adheres to
 
 ## unreleased
 
+- Nothing yet
+
+## 0.4.1 - 2020-07-29
+
+### Fixed
+
+- Correct *requirements.txt* file, for people who still use those.
+
 ### Changed
 
 - Prettier text wrapping for the `--help` output.
