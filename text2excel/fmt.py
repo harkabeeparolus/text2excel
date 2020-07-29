@@ -24,8 +24,18 @@ def format_paragraphs(input_text="", min_width=16, margin=5):
     return "\n\n".join(textwrap.fill(p, width=width) for p in paragraphs) + terminator
 
 
+def merge_input_files(files=None):
+    "Iterate over lines in all input files."
+    with fileinput.input(files=files) as input_files:
+        for line in input_files:
+            if fileinput.isfirstline() and fileinput.lineno():
+                # insert a blank line between input files
+                yield "\n"
+            yield line
+
+
 if __name__ == "__main__":
-    print(format_paragraphs("".join(fileinput.input())))
+    print(format_paragraphs("".join(merge_input_files())))
 
 
 # EOF
