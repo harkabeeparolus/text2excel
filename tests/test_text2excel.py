@@ -70,10 +70,12 @@ def test_format_paragraphs(monkeypatch):
         "vulputate dui\nvulputate metus pulvinar\nvolutpat. Nullam "
         "eu elementum\nlibero.\n"
     )
+
     with monkeypatch.context() as monkey:
         monkey.setenv("COLUMNS", "32")
         formatted = cli.format_paragraphs(lorem1)
     assert formatted == lorem2
+    assert cli.format_paragraphs("foo  bar") == "foo  bar"
 
 
 # EOF
