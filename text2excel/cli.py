@@ -54,18 +54,16 @@ def main(arguments=None):
 
 
 def format_paragraphs(input_text="", min_width=16):
-    "Text wrap paragraphs to terminal width."
-    # ensure that there is a final newline
-    if input_text.endswith("\n"):
-        input_text = input_text.rstrip() + "\n"
-    # remove any initial newlines
-    if input_text.startswith("\n"):
-        input_text = input_text.lstrip("\n")
-    # dedent and split into paragraphs separated by empty lines
-    paragraphs = "".join(textwrap.dedent(input_text)).split("\n\n")
-    # wrap and join paragraphs together with empty lines between
+    "Dedent and text wrap paragraphs to terminal width."
     width = max(min_width, shutil.get_terminal_size()[0] - 2)
-    return "\n\n".join(textwrap.fill(p, width=width) for p in paragraphs)
+    # dedent and remove any initial newlines
+    text = textwrap.dedent(input_text).lstrip("\n")
+    # we return a final newline if the input has one
+    terminator = "\n" if text.endswith("\n") else ""
+    # remove trailing whitespace, and split by empty lines
+    paragraphs = "".join(text.rstrip()).split("\n\n")
+    # wrap and join paragraphs together with empty lines between
+    return "\n\n".join(textwrap.fill(p, width=width) for p in paragraphs) + terminator
 
 
 if __name__ == "__main__":
