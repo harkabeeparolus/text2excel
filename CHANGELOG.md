@@ -9,7 +9,11 @@ and this project adheres to
 
 ## unreleased
 
-- Nothing yet
+### Changed
+
+- Prettier text wrapping for the `--help` output.
+- Slightly improved test cases.
+- Refactored the main cli script, for cleaner code.
 
 ## 0.4.0 - 2020-07-28
 
