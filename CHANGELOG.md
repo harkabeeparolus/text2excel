@@ -22,6 +22,7 @@ and this project adheres to
 - Prettier text wrapping for the `--help` output.
 - Slightly improved test cases.
 - Refactored the main cli script, for cleaner code.
+- Updated to Pytest version 6.
 
 ## 0.4.0 - 2020-07-28
 
