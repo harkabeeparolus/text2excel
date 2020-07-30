@@ -21,7 +21,7 @@ openpyxl = "^3.0.4"
 importlib-metadata = { version = "^1", python = "<3.8" }
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2"
+pytest = "^6.0"
 pylint = "^2.5.3"
 
 [tool.poetry.scripts]
