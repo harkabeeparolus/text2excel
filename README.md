@@ -1,5 +1,9 @@
 # text2excel
 
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/text2excel)
+[![PyPI](https://img.shields.io/pypi/v/text2excel)](https://pypi.org/project/text2excel/)
+[![GitHub license](https://img.shields.io/github/license/harkabeeparolus/text2excel)](https://github.com/harkabeeparolus/text2excel/blob/master/LICENSE)
+
 This program converts CSV Or TSV text files to Microsoft Excel format. It
 uses [openpyxl] to create Excel files.
 
