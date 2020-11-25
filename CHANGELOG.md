@@ -9,7 +9,9 @@ and this project adheres to
 
 ## unreleased
 
-- Nothing yet
+### Changed
+
+- Slightly more robust paragraph text wrapping for help output.
 
 ## 0.4.1 - 2020-07-29
 
@@ -23,6 +25,7 @@ and this project adheres to
 - Slightly improved test cases.
 - Refactored the main cli script, for cleaner code.
 - Updated to Pytest version 6.
+- Compatible with Python 3.6 and up.
 
 ## 0.4.0 - 2020-07-28
 
