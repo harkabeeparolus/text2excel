@@ -36,7 +36,7 @@ def merge_input_files(files=None):
             if fileinput.isfirstline() and fileinput.lineno():
                 # insert a blank line between input files
                 yield "\n"
-            yield line
+            yield str(line)
 
 
 if __name__ == "__main__":
