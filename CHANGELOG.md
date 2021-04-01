@@ -9,6 +9,10 @@ and this project adheres to
 
 ## unreleased
 
+- Nothing yet.
+
+## 0.4.2 - 2021-04-01
+
 ### Changed
 
 - Slightly more robust paragraph text wrapping for help output. Also made
