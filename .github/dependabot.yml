@@ -12,3 +12,9 @@ updates:
       timezone: "Europe/Stockholm"
     allow:
       - dependency-type: "production"
+
+  - package-ecosystem: "github-actions"
+    directory: "/" # check for workflow files in .github/workflows
+    schedule:
+      interval: "weekly"
+      timezone: "Europe/Stockholm"
