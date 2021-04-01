@@ -11,7 +11,12 @@ and this project adheres to
 
 ### Changed
 
-- Slightly more robust paragraph text wrapping for help output.
+- Slightly more robust paragraph text wrapping for help output. Also made
+  dedenting optional.
+- Improved testcase, read back contents from generated xlsx file.
+- Installed a default gitignore file instead of rolling my own.
+- Upgraded project dependencies to latest versions.
+- Fixed mypy and Pylance warnings, and added some type hints.
 
 ## 0.4.1 - 2020-07-29
 
