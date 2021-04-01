@@ -43,16 +43,28 @@ def test_openpyxl_alive():
     assert hasattr(workbook, "worksheets")
 
 
+def read_xlsx_file(filename):
+    "Read from an Excel file and return tuples"
+    workbook = openpyxl.load_workbook(filename)
+    return tuple(tuple(cell.value for cell in row) for row in workbook.active.rows)
+
+
 def test_create_file():
     "Try to convert a file, check that outfile is >0 bytes"
+    input_data = "one\ttwo\tthree\n1\t2\t3"
+    output_data = (("one", "two", "three"), (1, 2, 3))
+
     ntf = tempfile.NamedTemporaryFile
     with ntf(suffix=".txt", mode="w+") as infile, ntf(suffix=".xlsx") as outfile:
-        print("one\ttwo\tthree\n1\t2\t3", file=infile)
+        print(input_data, file=infile)
         infile.flush()
-        result = convert.write_excel(csv_filename=infile.name, outfilename=outfile.name)
-        assert hasattr(result, "exists")
-        assert result.exists()
-        assert result.stat().st_size > 0
+        outpath = convert.write_excel(
+            infile.name, outfilename=outfile.name, convert_numbers=True
+        )
+        assert hasattr(outpath, "exists")
+        assert outpath.exists()
+        assert outpath.stat().st_size > 0
+        assert read_xlsx_file(outpath) == output_data
 
 
 # EOF
