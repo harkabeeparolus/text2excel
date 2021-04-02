@@ -97,5 +97,5 @@ jobs:
         run: poetry run pytest
       - name: Run pylint
         run: poetry run pylint text2excel tests
-#      - name: Run mypy
-#        run: poetry run mypy text2excel tests
+      - name: Run mypy
+        run: poetry run mypy text2excel tests --show-error-codes --show-error-context --pretty
