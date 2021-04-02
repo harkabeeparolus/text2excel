@@ -7,5 +7,3 @@ except ImportError:
     import importlib_metadata as metadata  # type: ignore
 
 version = metadata.version("text2excel")
-
-__all__ = ["version"]
