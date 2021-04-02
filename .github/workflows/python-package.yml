@@ -49,8 +49,9 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: [ "ubuntu-latest", "macos-latest" ]
-        python-version: [ "3.9" ]
+        #os: [ "ubuntu-latest", "macos-latest" ]
+        os: [ "ubuntu-latest" ]
+        python-version: [ "3.8" ]
     runs-on: ${{ matrix.os }}
     steps:
       #----------------------------------------------
@@ -95,7 +96,7 @@ jobs:
       #----------------------------------------------
       - name: Run pytest
         run: poetry run pytest
-      - name: Run mypy
-        run: poetry run mypy text2excel tests
       - name: Run pylint
         run: poetry run pylint text2excel tests
+      - name: Run mypy
+        run: poetry run mypy text2excel tests
