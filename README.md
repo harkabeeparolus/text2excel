@@ -1,10 +1,15 @@
 # text2excel
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/harkabeeparolus/text2excel/Lint)](https://github.com/harkabeeparolus/text2excel/actions)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/text2excel)
-[![PyPI](https://img.shields.io/pypi/v/text2excel)](https://pypi.org/project/text2excel/)
-[![GitHub license](https://img.shields.io/github/license/harkabeeparolus/text2excel)](https://github.com/harkabeeparolus/text2excel/blob/master/LICENSE)
+[myactions]: https://github.com/harkabeeparolus/text2excel/actions
+[mypypi]: https://pypi.org/project/text2excel/
+[mylicense]: https://github.com/harkabeeparolus/text2excel/blob/master/LICENSE
+
+[![Lint and Test](https://github.com/harkabeeparolus/text2excel/actions/workflows/python-package.yml/badge.svg)][myactions]
+[![PyPI - Python Versions](https://img.shields.io/pypi/pyversions/text2excel)][mypypi]
+[![PyPI](https://img.shields.io/pypi/v/text2excel)][mypypi]
+[![GitHub license](https://img.shields.io/github/license/harkabeeparolus/text2excel)][mylicense]
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![CodeQL](https://github.com/harkabeeparolus/text2excel/actions/workflows/codeql-analysis.yml/badge.svg)][myactions]
 
 This program converts CSV Or TSV text files to Microsoft Excel format. It
 uses [openpyxl] to create Excel files.
@@ -13,7 +18,7 @@ As input it takes tab-separated `*.txt` files (TSV), or any CSV files
 (Comma-Separated Values) that can be auto-detected by the Python standard
 library [csv] module.
 
-* There is a [GitHub page for text2excel][text2excel]
+* You'll find the [text2excel source on GitHub][text2excel]
 
 [text2excel]: https://github.com/harkabeeparolus/text2excel
 [openpyxl]: https://openpyxl.readthedocs.io/
