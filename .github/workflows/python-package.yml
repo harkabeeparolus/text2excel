@@ -51,7 +51,7 @@ jobs:
       matrix:
         #os: [ "ubuntu-latest", "macos-latest" ]
         os: [ "ubuntu-latest" ]
-        python-version: [ "3.8" ]
+        python-version: [ "3.7" ]
     runs-on: ${{ matrix.os }}
     steps:
       #----------------------------------------------
@@ -89,7 +89,7 @@ jobs:
       #----------------------------------------------
       # install your root project, if required
       #----------------------------------------------
-      - name: Install library
+      - name: Install my main package
         run: poetry install --no-interaction
       #----------------------------------------------
       #              run test suite
