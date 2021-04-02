@@ -5,9 +5,7 @@ Converts a CSV (tab delimited) file to an Excel xlsx file.
 import csv
 import sys
 from pathlib import Path
-from typing import Optional
-from typing import TextIO
-from typing import Type
+from typing import Optional, TextIO, Type
 
 import openpyxl
 

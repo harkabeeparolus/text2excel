@@ -5,9 +5,7 @@ import tempfile
 import openpyxl
 import pytest
 
-from text2excel import cli
-from text2excel import convert
-from text2excel import version
+from text2excel import cli, convert, version
 
 
 def test_argparse(capsys):

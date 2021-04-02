@@ -11,8 +11,7 @@ auto-detected.
 import argparse
 import sys
 
-from text2excel import convert
-from text2excel import version
+from text2excel import convert, version
 from text2excel.fmt import format_paragraphs
 
 
