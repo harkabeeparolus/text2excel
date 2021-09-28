@@ -16,7 +16,7 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = ">=3.6.2"
 openpyxl = "^3.0.4"
 importlib-metadata = { version = ">=3,<5", python = "<3.8" }
 
@@ -26,6 +26,7 @@ pylint = "^2.5.3"
 mypy = "^0.812"
 openpyxl-stubs = "^0.1.19"
 isort = "^5.8.0"
+black = "^21.9b0"
 
 [tool.poetry.scripts]
 text2excel = 'text2excel.cli:main'
