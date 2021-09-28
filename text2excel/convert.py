@@ -24,15 +24,11 @@ def write_excel(
     """
 
     infile = Path(csv_filename)
-    if outfilename:
-        outfile = Path(outfilename)
-    else:
-        outfile = infile.with_suffix(".xlsx")
-
+    outfile = Path(outfilename) if outfilename else infile.with_suffix(".xlsx")
     workbook = openpyxl.Workbook()
     worksheet = workbook.active
 
-    with open(infile, newline="") as csvfile:
+    with open(infile, newline="", encoding="utf8") as csvfile:
         dialect = get_dialect(csv_filename, csvfile)
         if not dialect:
             raise RuntimeError(f"Unable to determine dialect for {infile}")
