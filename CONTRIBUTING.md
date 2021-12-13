@@ -12,6 +12,10 @@ sorts, or planned upcoming features.
 
 ## Git
 
+[text2excel]: https://github.com/harkabeeparolus/text2excel
+
+The source code for [text2excel] is on Github.
+
 I will assume that you are using a personal `~/.config/git/ignore` to avoid
 checking in your editor or IDE files. If you are not certain what this means,
 please check the well-written guide here:
@@ -21,20 +25,30 @@ please check the well-written guide here:
 
 [gitignore]: https://julien.danjou.info/properly-managing-your-gitignore/
 
-## Package Dependencies
+## Poetry and Package Dependencies
+
+[Poetry]: https://python-poetry.org
+
+First, make sure you have [Poetry] installed.
+You can use the official
+[Poetry installation guide](https://python-poetry.org/docs/#installation),
+or just run `pipx install poetry`.
 
 Use [Poetry] to install and manage your virtual environments and package
 dependencies:
 
 ```bash
-pipx install poetry
 git clone https://github.com/harkabeeparolus/text2excel.git
 cd text2excel
-python3 -m venv --prompt text2excel .venv
+python3 -m venv .venv
 poetry install
 ```
 
-[Poetry]: https://python-poetry.org
+If prompted to upgrade _pip_ to the latest version, please do so:
+
+```bash
+.venv/bin/python3 -m pip install --upgrade-strategy eager --upgrade pip setuptools
+```
 
 ### Upgrading Dependencies
 
@@ -94,20 +108,43 @@ pre-commit install
 
 [pre-commit]: https://pre-commit.com
 
+## Packaging text2excel
+
+If you want to bundle up *text2excel* into a single, standalone executable Python
+[zipapp], I highly recommend [shiv]. For example:
+
+```bash
+shiv -o text2excel -p "/usr/bin/env python3" -c text2excel text2excel
+```
+
+If _shiv_ doesn't work for you for some reason, you can also use [PEX]:
+
+```bash
+pex -o text2excel -c text2excel text2excel
+```
+
+[pipx]: https://github.com/pypa/pipx
+[shiv]: https://github.com/linkedin/shiv
+[PEX]: https://github.com/pantsbuild/pex
+[zipapp]: https://docs.python.org/3/library/zipapp.html
+
 ## Getting Python Software with pipx
 
-Use [pipx] for everything -- pipx is great! 🌟
+[pipx]: https://github.com/pypa/pipx
 
-[pipx]: https://pipxproject.github.io/pipx/
+I suggest installing all utilities with [pipx] -- pipx is great! 🌟
 
-Either follow the official
-[_installation guide_](https://pipxproject.github.io/pipx/installation/),
+To install or upgrade _pipx_, either follow the official
+[_installation guide_](https://pypa.github.io/pipx/installation/),
 or just run:
 
 ```bash
 python3 -m pip install --user --upgrade-strategy eager --upgrade pipx
 python3 -m pipx ensurepath
 ```
+
+At this point, you may need to logout to refresh your shell `$PATH` before
+proceeding.
 
 Then you can install stuff such as **pre-commit**, **black** or **shiv** using
 pipx!

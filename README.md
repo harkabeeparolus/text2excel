@@ -3,12 +3,13 @@
 [myactions]: https://github.com/harkabeeparolus/text2excel/actions
 [mypypi]: https://pypi.org/project/text2excel/
 [mylicense]: https://github.com/harkabeeparolus/text2excel/blob/master/LICENSE
+[black]: https://github.com/psf/black
 
 [![Lint and Test](https://github.com/harkabeeparolus/text2excel/actions/workflows/python-package.yml/badge.svg)][myactions]
 [![PyPI - Python Versions](https://img.shields.io/pypi/pyversions/text2excel)][mypypi]
 [![PyPI](https://img.shields.io/pypi/v/text2excel)][mypypi]
 [![GitHub license](https://img.shields.io/github/license/harkabeeparolus/text2excel)][mylicense]
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)][black]
 [![CodeQL](https://github.com/harkabeeparolus/text2excel/actions/workflows/codeql-analysis.yml/badge.svg)][myactions]
 
 This program converts CSV Or TSV text files to Microsoft Excel format. It
@@ -37,67 +38,20 @@ Saved to file: my_data_file.xlsx
 
 ## Installation
 
-I recommend installing *text2excel* with [pipx]:
+[pipx]: https://github.com/pypa/pipx
+
+To install or upgrade *text2excel* from [PyPI][mypypi], I recommend using [pipx]:
 
 ```bash
 pipx install text2excel
-```
-
-If you don't already have it, a guide for how to install _pipx_ is provided
-below on this page.
-
-To upgrade *text2excel* to the latest version, simply run:
-
-```bash
 pipx upgrade text2excel
 ```
 
-Or `pipx upgrade-all` if you want to go crazy. 😉
-
-If you want to bundle up *text2excel* into a single, standalone executable Python
-[zipapp], I highly recommend [shiv]. For example:
+If you don't have _pipx_, you could also use _pip_ with your preferred Python version:
 
 ```bash
-shiv -o text2excel -p "/usr/bin/env python3" -c text2excel text2excel
+python3 -m pip install --user --upgrade-strategy eager --upgrade text2excel
 ```
-
-If _shiv_ doesn't work for you for some reason, you can also use [PEX]:
-
-```bash
-pex -o text2excel -c text2excel text2excel
-```
-
-[pipx]: https://github.com/pipxproject/pipx/
-[shiv]: https://github.com/linkedin/shiv
-[PEX]: https://github.com/pantsbuild/pex
-[zipapp]: https://docs.python.org/3/library/zipapp.html
-
-### Installing pipx
-
-I suggest installing everything with [pipx], because it is fantastic. 🙂
-
-```bash
-python3 -m pip install --user pipx
-python3 -m pipx ensurepath
-```
-
-At this point, you may need to logout to refresh your shell `$PATH` before
-proceeding.
-
-For further details, see the official
-[pipx installation guide](https://pipxproject.github.io/pipx/installation/).
-
-### Installing shiv
-
-I recommend that you use _pipx_ to install shiv:
-
-```bash
-pipx install shiv
-```
-
-Alternatively, if you really don't want to use pipx for some reason, you can
-simply run `python3 -m pip install --user shiv`. Then, if necessary, manually
-reconfigure your shell `$PATH` to find any pip installed binaries.
 
 ## News
 
