@@ -16,7 +16,7 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.6.2"
+python = "^3.7"
 openpyxl = "^3.0.4"
 importlib-metadata = { version = ">=3,<5", python = "<3.8" }
 
