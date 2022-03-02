@@ -1,42 +1,42 @@
 [tool.poetry]
-name = "text2excel"
-version = "0.4.2"
-description = "Converts to Excel XLSX from a TSV or CSV text file."
-license = "MIT"
 authors = ["Fredrik Mellström <11281108+harkabeeparolus@users.noreply.github.com>"]
-readme = "README.md"
+classifiers = [
+  "Intended Audience :: Information Technology",
+  "Environment :: Console",
+  "Operating System :: OS Independent",
+  "Topic :: Text Processing",
+  "Topic :: Utilities",
+]
+description = "Converts to Excel XLSX from a TSV or CSV text file."
 homepage = "https://github.com/harkabeeparolus/text2excel"
 keywords = ["csv", "tsv", "excel", "xlsx"]
-classifiers = [
-    "Intended Audience :: Information Technology",
-    "Environment :: Console",
-    "Operating System :: OS Independent",
-    "Topic :: Text Processing",
-    "Topic :: Utilities"
-]
+license = "MIT"
+name = "text2excel"
+readme = "README.md"
+version = "0.4.2"
 
 [tool.poetry.dependencies]
+importlib-metadata = {version = ">=3,<5", python = "<3.8"}
+openpyxl = "^3.0.9"
 python = "^3.7"
-openpyxl = "^3.0.4"
-importlib-metadata = { version = ">=3,<5", python = "<3.8" }
 
 [tool.poetry.dev-dependencies]
-pytest = "^6.0"
-pylint = "^2.5.3"
-mypy = "^0.812"
-openpyxl-stubs = "^0.1.19"
+black = "^22.1.0"
 isort = "^5.8.0"
-black = "^21.9b0"
+mypy = "^0.931"
+openpyxl-stubs = "^0.1.21"
+pylint = "^2.5.3"
+pytest = "^7.0"
 
 [tool.poetry.scripts]
 text2excel = 'text2excel.cli:main'
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
 
 [tool.black]
-target-version = ['py36']
+target-version = ['py37']
 
 [tool.isort]
 profile = "black"
