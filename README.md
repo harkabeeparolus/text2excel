@@ -40,7 +40,7 @@ Saved to file: my_data_file.xlsx
 
 [pipx]: https://github.com/pypa/pipx
 
-To install or upgrade *text2excel* from [PyPI][mypypi], I recommend using [pipx]:
+To install or upgrade _text2excel_ from [PyPI][mypypi], I recommend using [pipx]:
 
 ```bash
 pipx install text2excel

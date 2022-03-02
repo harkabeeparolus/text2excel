@@ -7,7 +7,7 @@ instructions.
 
 * To edit the source code, make sure to install into a virtual environment!
 
-There are some __TODO:__ comments in the source that indicate a wishlist of
+There are some **TODO:** comments in the source that indicate a wishlist of
 sorts, or planned upcoming features.
 
 ## Git
@@ -53,7 +53,7 @@ If prompted to upgrade _pip_ to the latest version, please do so:
 ### Upgrading Dependencies
 
 To upgrade the packages to the latest versions, and generate a new
-*requirements.txt*, simply:
+_requirements.txt_, simply:
 
 ```bash
 poetry update
@@ -110,7 +110,7 @@ pre-commit install
 
 ## Packaging text2excel
 
-If you want to bundle up *text2excel* into a single, standalone executable Python
+If you want to bundle up _text2excel_ into a single, standalone executable Python
 [zipapp], I highly recommend [shiv]. For example:
 
 ```bash

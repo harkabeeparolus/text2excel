@@ -17,7 +17,7 @@ and this project adheres to
 
 - Slightly more robust paragraph text wrapping for help output. Also made
   dedenting optional.
-- Improved testcase, read back contents from generated xlsx file.
+- Improved test case, read back contents from generated xlsx file.
 - Installed a default gitignore file instead of rolling my own.
 - Upgraded project dependencies to latest versions.
 - Fixed mypy and Pylance warnings, and added some type hints.
@@ -26,7 +26,7 @@ and this project adheres to
 
 ### Fixed
 
-- Correct *requirements.txt* file, for people who still use those.
+- Correct _requirements.txt_ file, for people who still use those.
 
 ### Changed
 
@@ -40,7 +40,7 @@ and this project adheres to
 
 ### Changed
 
-- Changed project name from *csv2xlsx* to *text2excel*, since the former was
+- Changed project name from _csv2xlsx_ to _text2excel_, since the former was
   not available on PyPI.
 
 ## 0.3.1 - 2020-07-27
@@ -60,7 +60,7 @@ and this project adheres to
 
 ### Changed
 
-- Recommend __pre-commit__ to automate code formatting and linting.
+- Recommend **pre-commit** to automate code formatting and linting.
 
 ## 0.2.0 - 2020-07-24
 
