@@ -84,16 +84,16 @@ poetry run pytest
 Use [pylint], [Flake8] and [black] before checking in your code:
 
 ```bash
-black text2excel
-poetry run pylint text2excel
-flake8 text2excel
+black text2excel tests
+poetry run pylint text2excel tests
+flake8 text2excel tests
 ```
 
 [pytest]: https://pytest.org/
 [pylint]: https://www.pylint.org
 [Flake8]: https://flake8.pycqa.org/
 
-* I should setup automated testing with
+* I should setup automated testing, perhaps with
   [tox](https://tox.readthedocs.io/)
   or [nox](https://github.com/theacodes/nox)
 
@@ -114,13 +114,13 @@ If you want to bundle up _text2excel_ into a single, standalone executable Pytho
 [zipapp], I highly recommend [shiv]. For example:
 
 ```bash
-shiv -o text2excel -p "/usr/bin/env python3" -c text2excel text2excel
+shiv -o text2excel.pyz -c text2excel -p "/usr/bin/env python3" text2excel
 ```
 
 If _shiv_ doesn't work for you for some reason, you can also use [PEX]:
 
 ```bash
-pex -o text2excel -c text2excel text2excel
+pex -o text2excel.pyz -c text2excel text2excel
 ```
 
 [pipx]: https://github.com/pypa/pipx

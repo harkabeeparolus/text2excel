@@ -13,7 +13,7 @@ keywords = ["csv", "tsv", "excel", "xlsx"]
 license = "MIT"
 name = "text2excel"
 readme = "README.md"
-version = "0.4.2"
+version = "0.4.3"
 
 [tool.poetry.dependencies]
 importlib-metadata = {version = ">=3,<5", python = "<3.8"}

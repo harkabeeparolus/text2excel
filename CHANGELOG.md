@@ -11,6 +11,15 @@ and this project adheres to
 
 - Nothing yet.
 
+## 0.4.3 - 2022-03-02
+
+Maintenance release.
+
+### Changed
+
+- Updated versions of dependencies.
+- Minor code and documentation cleanups.
+
 ## 0.4.2 - 2021-04-01
 
 ### Changed
