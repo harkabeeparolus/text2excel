@@ -27,6 +27,7 @@ mypy = "^0.931"
 openpyxl-stubs = "^0.1.21"
 pylint = "^2.5.3"
 pytest = "^7.0"
+flake8 = "^4.0.1"
 
 [tool.poetry.scripts]
 text2excel = 'text2excel.cli:main'
