@@ -31,15 +31,15 @@ jobs:
       - name: Install my package
         run: poetry install --no-interaction
       - name: Check code formatting style with black
-        run: black . --check
+        run: poetry run black . --check
       - name: Check import order with isort
-        run: isort . --check
+        run: poetry run isort . --check
       - name: Lint with flake8
         run: |
           # stop the build if there are Python syntax errors or undefined names
-          flake8 text2excel tests --count --select=E9,F63,F7,F82 --show-source --statistics
+          poetry run flake8 text2excel tests --count --select=E9,F63,F7,F82 --show-source --statistics
           # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-          flake8 text2excel tests --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+          poetry run flake8 text2excel tests --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Run pylint
         run: poetry run pylint text2excel tests
 #      - name: Run mypy
