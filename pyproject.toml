@@ -28,10 +28,14 @@ text2excel = "text2excel.cli:main"
 
 [dependency-groups]
 dev = [
+  "mypy>=1.20.1,<2",
   "openpyxl-stubs>=0.1.21",
   "pytest>=9.0.3",
-  "mypy (>=1.20.1,<2.0.0)",
+  "ruff>=0.15",
 ]
+
+[tool.ruff]
+lint.select = ["E", "F", "I", "W", "UP", "B", "SIM"]
 
 [build-system]
 build-backend = "poetry.core.masonry.api"

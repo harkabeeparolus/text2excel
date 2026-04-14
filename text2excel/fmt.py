@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
 "Text formatting utility, wrap text to screen width."
+
 # By Fredrik Mellström <https://github.com/harkabeeparolus>
 import fileinput
 import re

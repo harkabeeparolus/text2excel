@@ -6,6 +6,7 @@ xlsx file.
 If the file name matches *.txt, TSV is assumed. Otherwise, CSV is assumed and
 auto-detected.
 """
+
 # By Fredrik Mellström <https://github.com/harkabeeparolus>
 # Based on https://gist.github.com/konrad/4154786 by Konrad Förstner
 import argparse

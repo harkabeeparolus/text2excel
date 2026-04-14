@@ -2,10 +2,11 @@
 """
 Converts a CSV (tab delimited) file to an Excel xlsx file.
 """
+
 import csv
 import sys
 from pathlib import Path
-from typing import Optional, TextIO, Type
+from typing import TextIO
 
 import openpyxl
 
@@ -44,11 +45,9 @@ def write_excel(
     return outfile
 
 
-def get_dialect(
-    filename: str, filehandle: Optional[TextIO] = None
-) -> Type[csv.Dialect]:
+def get_dialect(filename: str, filehandle: TextIO | None = None) -> type[csv.Dialect]:
     """Try to guess dialect based on file name or contents."""
-    dialect: Type[csv.Dialect] = csv.excel_tab
+    dialect: type[csv.Dialect] = csv.excel_tab
 
     file_path = Path(filename)
     if file_path.suffix == ".txt":
