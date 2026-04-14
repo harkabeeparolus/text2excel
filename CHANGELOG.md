@@ -11,6 +11,17 @@ and this project adheres to
 
 - Nothing yet.
 
+## 0.4.4 - 2026-04-14
+
+Maintenance release.
+
+### Changed
+
+- Requires Python 3.10 or later. Python 3.7, 3.8, and 3.9 are no longer supported.
+- Updated dependencies to latest versions.
+- Modernised packaging: project metadata now follows PEP 621, dependency groups
+  follow PEP 735, and the build system requires Poetry 2.
+
 ## 0.4.3 - 2022-03-02
 
 Maintenance release.

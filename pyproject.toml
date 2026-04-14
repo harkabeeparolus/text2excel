@@ -1,5 +1,13 @@
-[tool.poetry]
-authors = ["Fredrik Mellström <11281108+harkabeeparolus@users.noreply.github.com>"]
+[project]
+name = "text2excel"
+version = "0.4.4"
+description = "Converts to Excel XLSX from a TSV or CSV text file."
+readme = "README.md"
+license = "MIT"
+authors = [
+  {name = "Fredrik Mellström", email = "11281108+harkabeeparolus@users.noreply.github.com"},
+]
+keywords = ["csv", "tsv", "excel", "xlsx"]
 classifiers = [
   "Intended Audience :: Information Technology",
   "Environment :: Console",
@@ -7,37 +15,24 @@ classifiers = [
   "Topic :: Text Processing",
   "Topic :: Utilities",
 ]
-description = "Converts to Excel XLSX from a TSV or CSV text file."
-homepage = "https://github.com/harkabeeparolus/text2excel"
-keywords = ["csv", "tsv", "excel", "xlsx"]
-license = "MIT"
-name = "text2excel"
-readme = "README.md"
-version = "0.4.3"
+requires-python = ">=3.10"
+dependencies = [
+  "openpyxl>=3.0.9,<4",
+]
 
-[tool.poetry.dependencies]
-importlib-metadata = {version = ">=3,<5", python = "<3.8"}
-openpyxl = "^3.0.9"
-python = "^3.7"
+[project.urls]
+Homepage = "https://github.com/harkabeeparolus/text2excel"
 
-[tool.poetry.dev-dependencies]
-black = "^22.1.0"
-isort = "^5.8.0"
-mypy = "^0.931"
-openpyxl-stubs = "^0.1.21"
-pylint = "^2.5.3"
-pytest = "^7.0"
-flake8 = "^4.0.1"
+[project.scripts]
+text2excel = "text2excel.cli:main"
 
-[tool.poetry.scripts]
-text2excel = 'text2excel.cli:main'
+[dependency-groups]
+dev = [
+  "openpyxl-stubs>=0.1.21",
+  "pytest>=9.0.3",
+  "mypy (>=1.20.1,<2.0.0)",
+]
 
 [build-system]
 build-backend = "poetry.core.masonry.api"
-requires = ["poetry-core>=1.0.0"]
-
-[tool.black]
-target-version = ['py37']
-
-[tool.isort]
-profile = "black"
+requires = ["poetry-core>=2.0.0"]
