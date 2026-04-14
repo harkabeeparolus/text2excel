@@ -52,25 +52,22 @@ If prompted to upgrade _pip_ to the latest version, please do so:
 
 ### Upgrading Dependencies
 
-To upgrade the packages to the latest versions, and generate a new
-_requirements.txt_, simply:
+To upgrade the packages to the latest versions, simply:
 
 ```bash
 poetry update
-poetry export -f requirements.txt >requirements.txt
 ```
 
 Make sure to do `poetry run pytest`, and then check in:
 
 * pyproject.toml
 * poetry.lock
-* requirements.txt
 
 ## Coding Style
 
-You can use any coding style you want, as long as it's [Black]. 😉
+You can use any coding style you want, as long as it passes [Ruff]. 😉
 
-[Black]: https://black.readthedocs.io/
+[Ruff]: https://docs.astral.sh/ruff/
 
 ## Code Quality
 
@@ -81,17 +78,15 @@ test your code before checking in.
 poetry run pytest
 ```
 
-Use [pylint], [Flake8] and [black] before checking in your code:
+Use [ruff] to check and format your code before checking in:
 
 ```bash
-black text2excel tests
-poetry run pylint text2excel tests
-flake8 text2excel tests
+ruff check .
+ruff format .
 ```
 
+[ruff]: https://docs.astral.sh/ruff/
 [pytest]: https://pytest.org/
-[pylint]: https://www.pylint.org
-[Flake8]: https://flake8.pycqa.org/
 
 * I should setup automated testing, perhaps with
   [tox](https://tox.readthedocs.io/)
@@ -146,14 +141,12 @@ python3 -m pipx ensurepath
 At this point, you may need to logout to refresh your shell `$PATH` before
 proceeding.
 
-Then you can install stuff such as **pre-commit**, **black** or **shiv** using
+Then you can install stuff such as **pre-commit**, **ruff** or **shiv** using
 pipx!
 
 ```bash
 pipx install poetry
-pipx install black
-pipx install pylint
-pipx install flake8
+pipx install ruff
 pipx install shiv
 pipx install pre-commit
 ```

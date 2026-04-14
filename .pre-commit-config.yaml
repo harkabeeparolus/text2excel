@@ -2,7 +2,7 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.3.0
+    rev: v6.0.0
     hooks:
     -   id: check-added-large-files
     -   id: check-builtin-literals
@@ -24,27 +24,9 @@ repos:
     -   id: name-tests-test
     -   id: trailing-whitespace
         args: [--markdown-linebreak-ext=md]
--   repo: https://github.com/asottile/pyupgrade
-    rev: v2.34.0
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.10
     hooks:
-    -   id: pyupgrade
-        args: [--py36-plus]
--   repo: https://github.com/pycqa/isort
-    rev: 5.10.1
-    hooks:
-      - id: isort
-        name: isort (python)
--   repo: https://github.com/psf/black
-    rev: 22.3.0
-    hooks:
-    -   id: black
-        language_version: python3
--   repo: https://gitlab.com/pycqa/flake8
-    rev: 3.9.2
-    hooks:
-    -   id: flake8
--   repo: https://github.com/PyCQA/pylint
-    rev: v2.14.3
-    hooks:
-    -   id: pylint
-        args: [--disable=import-error]
+    -   id: ruff
+        args: [--fix]
+    -   id: ruff-format

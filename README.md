@@ -3,14 +3,13 @@
 [myactions]: https://github.com/harkabeeparolus/text2excel/actions
 [mypypi]: https://pypi.org/project/text2excel/
 [mylicense]: https://github.com/harkabeeparolus/text2excel/blob/master/LICENSE
-[black]: https://github.com/psf/black
+[ruff]: https://docs.astral.sh/ruff/
 
 [![Lint and Test](https://github.com/harkabeeparolus/text2excel/actions/workflows/python-package.yml/badge.svg)][myactions]
 [![PyPI - Python Versions](https://img.shields.io/pypi/pyversions/text2excel)][mypypi]
 [![PyPI](https://img.shields.io/pypi/v/text2excel)][mypypi]
 [![GitHub license](https://img.shields.io/github/license/harkabeeparolus/text2excel)][mylicense]
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)][black]
-[![CodeQL](https://github.com/harkabeeparolus/text2excel/actions/workflows/codeql-analysis.yml/badge.svg)][myactions]
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)][ruff]
 
 This program converts CSV Or TSV text files to Microsoft Excel format. It
 uses [openpyxl] to create Excel files.
